@@ -21,6 +21,7 @@ public class Indices : MonoBehaviour
         _inventory = FindObjectOfType<Inventory>();
         IsSelected = false;
         pickUpButton.interactable = false;
+        pickUpButton.onClick.AddListener(pickup);
        
     }
 
@@ -51,18 +52,19 @@ public class Indices : MonoBehaviour
             Destroy(gameObject.GetComponent<BoxCollider2D>());
             PickUpSong.Play();
            _inventory.IndiceUpdate();
+          
 
         }
       
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag =="Player" && IsSelected==true)
         {
             pickUpButton.interactable = true;
           
-            pickUpButton.onClick.AddListener(pickup);
+           
          
         }
     }
@@ -77,8 +79,6 @@ public class Indices : MonoBehaviour
        
     }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        
-    }
+    
+    
 }
