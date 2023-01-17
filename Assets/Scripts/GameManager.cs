@@ -18,21 +18,23 @@ public class GameManager : MonoBehaviour
     void Update()
     {
       
-        if (_inventory.IndiceNumber == 0f)
+        if (_inventory.IndiceNumber == 6f)
         {
             Winsound.Play();
-            StartCoroutine(WaitScene());   
             WinMenu();
         }
     }
 
     void WinMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       
+        StartCoroutine(WaitScene());   
+       
     }
     IEnumerator WaitScene()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     
     

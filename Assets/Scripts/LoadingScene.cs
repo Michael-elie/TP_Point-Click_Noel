@@ -10,19 +10,16 @@ public class LoadingScene : MonoBehaviour
    public GameObject LoadingScreen ;
    public Slider Slider;
    public TextMeshProUGUI ProgressText;
-   public void Start()
+   
+
+   public void LoadScene(int sceneIndex)
    {
-       //LoadingScreen.SetActive(false);
+       StartCoroutine(LoadSceneAsync(sceneIndex));
    }
 
-   public void LoadScene(int sceneId)
+   IEnumerator LoadSceneAsync(int sceneIndex)
    {
-       StartCoroutine(LoadSceneAsync(sceneId));
-   }
-
-   IEnumerator LoadSceneAsync(int sceneId)
-   {
-       AsyncOperation operation = SceneManager.LoadSceneAsync(sceneId);
+       AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
        
        LoadingScreen.SetActive(true);
 
@@ -32,7 +29,7 @@ public class LoadingScene : MonoBehaviour
            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
            Slider.value = progressValue;
            ProgressText.text = progressValue * 100f + "%";
-           Debug.Log(operation.progress);
+           Debug.Log(progressValue);
            yield return null; 
        }
    }
