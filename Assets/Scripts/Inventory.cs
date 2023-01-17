@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +15,11 @@ public class Inventory : MonoBehaviour
    private Indices _indices;
    public TextMeshProUGUI IndiceText; 
   public float IndiceNumber = 7f ;
+ 
+
+ 
+  
+  
     
    public void Start()
    {
@@ -24,7 +29,7 @@ public class Inventory : MonoBehaviour
 
    public void Update()
    {
-       
+      
    }
 
    public void IndiceUpdate()
