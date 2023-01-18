@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
       
-        if (_inventory.IndiceNumber == 6f)
+        if (_inventory.IndiceNumber == 0f)
         {
             Winsound.Play();
             WinMenu();
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator WaitScene()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     
