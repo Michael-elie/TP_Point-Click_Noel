@@ -50,6 +50,7 @@ public class Indices : MonoBehaviour
         {
             ItemIcon.GetComponent<Image>().color = Color.white;
             Destroy(gameObject.GetComponent<BoxCollider2D>());
+            Destroy(gameObject.GetComponent<SpriteRenderer>());
             PickUpSong.Play();
            _inventory.IndiceUpdate();
           
