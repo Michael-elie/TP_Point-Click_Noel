@@ -970,6 +970,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1637378144}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &646075393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,16 +1702,16 @@ AudioSource:
   m_GameObject: {fileID: 1278000035}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: fc992c9a20d073f4b835cf026a97fa7f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0fe2ed401db3db34a9e5eeda4ab68ceb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.826
+  m_Volume: 0.14
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 108
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1955,7 +1967,7 @@ AudioSource:
   m_GameObject: {fileID: 1503583227}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: fc992c9a20d073f4b835cf026a97fa7f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 33ea77e629f76fe4c9677de1a1a512d4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.747
@@ -3582,6 +3594,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1503583228}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1637378144}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
