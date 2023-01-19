@@ -14,6 +14,8 @@ public class Indices : MonoBehaviour
     [SerializeField] private AudioSource PickUpSong;
      private Inventory _inventory;
 
+     [SerializeField] private GameObject CandleLight; 
+
     
 
     private void Start()
@@ -51,8 +53,10 @@ public class Indices : MonoBehaviour
             ItemIcon.GetComponent<Image>().color = Color.white;
             Destroy(gameObject.GetComponent<BoxCollider2D>());
             Destroy(gameObject.GetComponent<SpriteRenderer>());
+            Destroy(CandleLight);
             PickUpSong.Play();
            _inventory.IndiceUpdate();
+           
           
            
 
